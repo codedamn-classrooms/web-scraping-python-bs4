@@ -7,7 +7,7 @@ page = requests.get(
 soup = BeautifulSoup(page.content, 'html.parser')
 
 # Extract title of page
-page_title = soup.title
+page_title = soup.title.text
 
 # print the result
 print(page_title)
