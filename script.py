@@ -1,11 +1,9 @@
 import requests
 
 # Make a request to https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/
-# Store the result in 'res' variable
-res = requests.get(
-    'https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/')
-txt = res.text
-status = res.status_code
 
-print(txt, status)
+# Extract title of page
+page_title = '<replace with title>'
+
 # print the result
+print(page_title)
