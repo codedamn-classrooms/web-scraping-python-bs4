@@ -1,4 +1,5 @@
-import requests from bs4 import BeautifulSoup
+import requests
+from bs4 import BeautifulSoup
 # Make a request
 page = requests.get(
     "https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/")
