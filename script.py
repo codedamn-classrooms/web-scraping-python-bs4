@@ -12,19 +12,8 @@ all_products = []
 # Extract and store in top_items according to instructions on the left
 products = soup.select('div.thumbnail')
 for product in products:
-    name = product.select('h4 > a')[0].text.strip()
-    description = product.select('p.description')[0].text.strip()
-    price = product.select('h4.price')[0].text.strip()
-    reviews = product.select('div.ratings')[0].text.strip()
-    image = product.select('img')[0].get('src')
-
-    all_products.append({
-        "name": name,
-        "description": description,
-        "price": price,
-        "reviews": reviews,
-        "image": image
-    })
+    # TODO: Work
+    print("Work on product here")
 
 
 keys = all_products[0].keys()
