@@ -5,9 +5,17 @@ page = requests.get(
     "https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/")
 soup = BeautifulSoup(page.content, 'html.parser')
 
-# Create all_links as empty list
+# Create top_items as empty list
 all_links = []
 
-# Extract and store in all_links according to instructions on the left
+# Extract and store in top_items according to instructions on the left
+links = soup.select('a')
+for ahref in links:
+    text = ahref.text
+    text = text.strip() if text is None else ''
+
+    href = ahref.get('href')
+    href = href.strip() if href is None else ''
+    all_links.append({"href": href, "text": text})
 
 print(all_links)
