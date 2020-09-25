@@ -5,18 +5,9 @@ page = requests.get(
     "https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/")
 soup = BeautifulSoup(page.content, 'html.parser')
 
-# Create top_items as empty list
-top_items = []
+# Create all_links as empty list
+all_links = []
 
-# Extract and store in top_items according to instructions on the left
-products = soup.select('div.thumbnail')
-for elem in products:
-    title = elem.select('h4 > a.title')[0].text
-    review_label = elem.select('div.ratings')[0].text
-    info = {
-        "title": title.strip(),
-        "review": review_label.strip()
-    }
-    top_items.append(info)
+# Extract and store in all_links according to instructions on the left
 
-print(top_items)
+print(all_links)
