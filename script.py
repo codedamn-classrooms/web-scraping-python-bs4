@@ -1,19 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
-
+import requests from bs4 import BeautifulSoup
 # Make a request
 page = requests.get(
     "https://codedamn-classrooms.github.io/webscraper-python-codedamn-classroom-website/")
 soup = BeautifulSoup(page.content, 'html.parser')
 
-# Extract title of page
-page_title = soup.title
+# Create all_h1_tags as empty list
 
-# Extract body of page
-page_body = soup.body
+# Set all_h1_tags to all h1 tags of the soup
 
-# Extract head of page
-page_head = soup.head
-
-# print the result
-print(page_title, page_head)
+# Create seventh_p_text and set it to 7th p element text of the page
