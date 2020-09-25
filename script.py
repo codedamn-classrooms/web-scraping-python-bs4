@@ -9,3 +9,14 @@ soup = BeautifulSoup(page.content, 'html.parser')
 top_items = []
 
 # Extract and store in top_items according to instructions on the left
+products = soup.select('div.thumbnail')
+for elem in products:
+    title = elem.select('h4 > a.title').text
+    review_label = elem.select('div.ratings').text
+    info = {
+        "title": title,
+        "review": review_label
+    }
+    top_items.append(info)
+
+print(top_items)
